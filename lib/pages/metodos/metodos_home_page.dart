@@ -38,6 +38,16 @@ class MetodosHomePage extends StatelessWidget {
               onPressed: () => Navigator.of(context).pushNamed('/metodos/create'),
               child: Text('Create'),
             ),
+            SizedBox(
+              height: 20,
+            ),
+            ElevatedButton(
+              onPressed: () => Navigator.of(context).pushNamed('/metodos/update'),
+              child: Text('Update'),
+            ),
+            SizedBox(
+              height: 20,
+            ),
           ],
         ),
       ),
