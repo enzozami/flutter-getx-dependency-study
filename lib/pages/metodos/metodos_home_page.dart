@@ -24,6 +24,13 @@ class MetodosHomePage extends StatelessWidget {
               onPressed: () => Navigator.of(context).pushNamed('/metodos/lazyPut'),
               child: Text('Lazy Put'),
             ),
+            SizedBox(
+              height: 20,
+            ),
+            ElevatedButton(
+              onPressed: () => Navigator.of(context).pushNamed('/metodos/putAsync'),
+              child: Text('Put Async'),
+            ),
           ],
         ),
       ),
