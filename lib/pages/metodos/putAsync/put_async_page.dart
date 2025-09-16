@@ -20,10 +20,9 @@ class PutAsyncPage extends StatefulWidget {
 }
 
 class _PutAsyncPageState extends State<PutAsyncPage> {
+  String nome = '';
   @override
   Widget build(BuildContext context) {
-    String nome = '';
-
     return Scaffold(
       appBar: AppBar(
         title: const Text('Put Async'),
