@@ -3,7 +3,6 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_instance/get_instance.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 import 'package:get_dependencias/pages/bindings/bindings_controller.dart';
-import 'package:get_dependencias/pages/bindings/bindings_example.dart';
 import 'package:get_dependencias/pages/bindings/bindings_home_page.dart';
 
 class HomePage extends StatelessWidget {

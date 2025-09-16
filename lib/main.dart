@@ -7,6 +7,7 @@ import 'package:get_dependencias/pages/basico/basico_home_page.dart';
 import 'package:get_dependencias/pages/bindings/bindings_controller.dart';
 import 'package:get_dependencias/pages/bindings/bindings_example.dart';
 import 'package:get_dependencias/pages/bindings/bindings_home_page.dart';
+import 'package:get_dependencias/pages/bindings/middleware_binding.dart';
 import 'package:get_dependencias/pages/home_page.dart';
 import 'package:get_dependencias/pages/metodos/create/create_home_page.dart';
 import 'package:get_dependencias/pages/metodos/delete_update/delete_page.dart';
@@ -66,6 +67,9 @@ class MyApp extends StatelessWidget {
         ),
         GetPage(
           name: '/bindings',
+          middlewares: [
+            MiddlewareBinding(),
+          ],
           binding: BindingsExample(),
           page: () => BindingsHomePage(),
         ),
