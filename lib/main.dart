@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_instance/get_instance.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:get/get_navigation/src/routes/get_route.dart';
 import 'package:get_dependencias/pages/basico/basico_home_page.dart';
+import 'package:get_dependencias/pages/bindings/bindings_controller.dart';
+import 'package:get_dependencias/pages/bindings/bindings_example.dart';
+import 'package:get_dependencias/pages/bindings/bindings_home_page.dart';
 import 'package:get_dependencias/pages/home_page.dart';
 import 'package:get_dependencias/pages/metodos/create/create_home_page.dart';
 import 'package:get_dependencias/pages/metodos/delete_update/delete_page.dart';
@@ -58,7 +63,30 @@ class MyApp extends StatelessWidget {
               page: () => DeletePage(),
             ),
           ],
-        )
+        ),
+        GetPage(
+          name: '/bindings',
+          binding: BindingsExample(),
+          page: () => BindingsHomePage(),
+        ),
+        GetPage(
+          name: '/binding_builder',
+          binding: BindingsBuilder(
+            () {
+              Get.put(
+                BindingsController(nome: 'Inicializado dentro do Binding'),
+              );
+            },
+          ),
+          page: () => BindingsHomePage(),
+        ),
+        GetPage(
+          name: '/binding_builder_put',
+          binding: BindingsBuilder.put(
+            () => BindingsController(nome: 'Inicializado dentro do Binding'),
+          ),
+          page: () => BindingsHomePage(),
+        ),
       ],
     );
   }

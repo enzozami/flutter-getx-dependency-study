@@ -25,6 +25,24 @@ class HomePage extends StatelessWidget {
               },
               child: Text('Métodos'),
             ),
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pushNamed('/bindings');
+              },
+              child: Text('Bindings'),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pushNamed('/binding_builder');
+              },
+              child: Text('Binding Builder'),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pushNamed('/binding_builder_put');
+              },
+              child: Text('Binding Builder Put'),
+            ),
           ],
         ),
       ),
