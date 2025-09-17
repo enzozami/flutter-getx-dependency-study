@@ -64,6 +64,12 @@ class HomePage extends StatelessWidget {
               },
               child: Text('Initial Bindings'),
             ),
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pushNamed('/get_service');
+              },
+              child: Text('Getx Service'),
+            ),
           ],
         ),
       ),
