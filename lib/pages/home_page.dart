@@ -58,6 +58,12 @@ class HomePage extends StatelessWidget {
               },
               child: Text('Binding sem rota nomeada'),
             ),
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pushNamed('/initial_binding');
+              },
+              child: Text('Initial Bindings'),
+            ),
           ],
         ),
       ),

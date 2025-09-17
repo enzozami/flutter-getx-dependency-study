@@ -9,6 +9,8 @@ import 'package:get_dependencias/pages/bindings/bindings_example.dart';
 import 'package:get_dependencias/pages/bindings/bindings_home_page.dart';
 import 'package:get_dependencias/pages/bindings/middleware_binding.dart';
 import 'package:get_dependencias/pages/home_page.dart';
+import 'package:get_dependencias/pages/initial_bindings/initial_bindings.dart';
+import 'package:get_dependencias/pages/initial_bindings/initial_bindings_page.dart';
 import 'package:get_dependencias/pages/metodos/create/create_home_page.dart';
 import 'package:get_dependencias/pages/metodos/delete_update/delete_page.dart';
 import 'package:get_dependencias/pages/metodos/delete_update/update_home_page.dart';
@@ -90,6 +92,11 @@ class MyApp extends StatelessWidget {
             () => BindingsController(nome: 'Inicializado dentro do Binding'),
           ),
           page: () => BindingsHomePage(),
+        ),
+        GetPage(
+          name: '/initial_binding',
+          // binding: InitialBindings(),
+          page: () => InitialBindingsPage(),
         ),
       ],
     );
